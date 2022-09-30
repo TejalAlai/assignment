@@ -1,0 +1,14 @@
+from instabot import Bot
+bot = Bot()
+bot.login(username="", password="")
+
+my_followers = bot.get_user_followers("username")
+for follower in my_followers:
+    print(follower)
+import pandas as pd
+df = pd.DataFrame(insta_data, columns=['username','follower'])
+df
+len(df.username.unique())
+df.drop_duplicates(subset='username', inplace=True)
+len(df.username.unique())
+df.to_csv(r"link to save your csv file")
